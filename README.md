@@ -35,7 +35,7 @@ You need to write code which would:
 3. Print in console in one line the weather and currency for a given city (London)
 
 
-##### Solution 
+#### Solution 
 ```js
 Provider.findCity(51.5074, 0.1278).then(console.log)
 Provider.findCity(51.5074, 0.1278).then(Provider.getWeather).then(console.log)
@@ -50,12 +50,14 @@ Provider.findCity(51.5074, 0.1278).then(Provider.getWeather).then(console.log)
 ### Task 3 (25 min)
 
 Look at this two-page app design for small company contact book:
+
 ![test image](./img/example.png)
 
 The management ask to use React and NodeJS as base technology for this app (because of skills across the company). In future the company hope to build more functions around this app. You are asked to provide initial technical design for this app which should include the following points:
-##### Solution (Q/A)    
+#### Solution (Q/A)    
 
 1. Frontend part:
+
     a. Tools, frameworks, npm libraries you plan to use and why
     ```
     - typescript for type safety and code confidence
@@ -67,11 +69,13 @@ The management ask to use React and NodeJS as base technology for this app (beca
     - zustand or valtio for straight forward state management
     - chakra-ui for styling. It's flexible and easy to use css in js library that  provides prebuild components and great accessibility out of the box
     ```
+
     b. Directory structure for source code folder
     ```
     nextjs already enforces some structure like /peges and /pages/api folders 
     In addition to that I think there should be /componets /globals /utils /store folders
     ```
+
     c. List of components which you’ll implement (with short description)
     ```
     - ProfileListPage - a page for profile listing
@@ -79,6 +83,7 @@ The management ask to use React and NodeJS as base technology for this app (beca
     - ProfileItem - contains info/ui for single profile
     - ProfilePage - a page for single profile
     ```
+
     d. For one of the components also provide in which directory/-ies component’s file/-es will be located 
     ```
     - /pages/ProfileListPage
@@ -86,6 +91,7 @@ The management ask to use React and NodeJS as base technology for this app (beca
     - /components/ProfileList/index.tsx
     - /components/ProfileItem/index.tsx
     ```
+
     e. Benefits/drawbacks comparing with traditional (not-SPA) app approach
     ```
     Pros
@@ -96,24 +102,29 @@ The management ask to use React and NodeJS as base technology for this app (beca
       - If it's not SSR framewor like nextjs (i.e. react) it's not an easy task to make website SEO friendly
       - Could take more time to initialy download/load the app
     ```
+
     f. Any other comments and suggestions
     ```
     If we need the POC here and now then forget the above.
     Just npx create-next-app or create-react-app and start delivering
     ```
+
 2. Backend part:
+
     a. Short description of API – URI, format, why needed
     ```
     /
     /profile/some-id-goes-here
     if the profile is something else i.e. 'book' I think slugified url makes sense. Also better for SEO
     ```
+
     b. Framework
     ```
     - nextjs
     - express
     - aws api gateway, dynamo db or just Amplify
     ```
+
     c. Any other comments and suggestions
     ```
     Maybe just some headles CMS would do what's needed without any backend hassle. 
@@ -124,7 +135,7 @@ The management ask to use React and NodeJS as base technology for this app (beca
 You have been tasked with creating a helper function that will be used to determine the output of an array of data.
 Each element of the array has the following structure:
 
-```
+```json
 {  
     state: <String> // a state to go to  
     errorCode: <String> // optional error code  
@@ -166,7 +177,7 @@ Starting point:
     
   } 
  ```
-  ##### Solution
+  #### Solution
 
 ```js
   function getErrorMessage(errorCode) {
@@ -267,7 +278,7 @@ Please provide comments to the junior in the following format:
   * Line number;
   * Comment.
 
-##### Solution
+#### Solution
 
  - line 05: 
     - In react we can use modern javascript syntax (es6) and arguably `const` is more prefered than `var`. 
@@ -292,7 +303,9 @@ Please provide comments to the junior in the following format:
    - As far as I can tell from the description, this user story is only about the error message. There should not be any other message displayed.
 
 
-Here is another approach for implementing this user story. If we need a loading state I would probably handle the logic with the `useReducer` hook
+Here is another approach for implementing this user story. If we need a loading state I would probably handle the entire state logic with `useReducer` hook. 
+
+**NB**: As a reviewer I would not implement the entire user story, this is just an example
 
 ```js
 function fetchFuel(fleetId) {
