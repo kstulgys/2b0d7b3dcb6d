@@ -135,7 +135,7 @@ The management ask to use React and NodeJS as base technology for this app (beca
 You have been tasked with creating a helper function that will be used to determine the output of an array of data.
 Each element of the array has the following structure:
 
-```json
+```
 {  
     state: <String> // a state to go to  
     errorCode: <String> // optional error code  
@@ -228,7 +228,7 @@ The information about the amount of litres will be receive through the following
 https://new.world.com/fleet/121
 With the contract:
 
-```json
+```
 {
   “id”: number, //id of the fleet
   “litres”: number, //the amount of fuel consumed by fleet
@@ -254,7 +254,7 @@ Here will be the code from the junior developer. Please make code review (take i
 12:            setFeul(json);
 13:            console.log(json);
 14:          })
-15:      }); // 
+15:      });
 16:  
 17:      useEffect(() => {
 18:        if (!fuel) setAlertTxt('Processing...'); else
